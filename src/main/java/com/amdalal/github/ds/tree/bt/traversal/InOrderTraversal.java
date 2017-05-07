@@ -2,10 +2,10 @@ package com.amdalal.github.ds.tree.bt.traversal;
 
 import com.amdalal.github.ds.tree.Traversable;
 import com.amdalal.github.ds.tree.bt.BinaryTree;
-import com.amdalal.github.ds.tree.TreeEntry;
+import com.amdalal.github.ds.Visitable;
 import com.amdalal.github.ds.tree.bt.BinaryTreeNode;
 
-public class InOrderTraversal<T extends TreeEntry> implements Traversable {
+public class InOrderTraversal<T extends Visitable> implements Traversable {
 
     private BinaryTree<T> binaryTree;
 

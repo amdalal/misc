@@ -10,43 +10,43 @@ public class TestQuickSort {
     @Test
     public void test1() {
         MyInteger[] data = new MyInteger[3];
-        data[0] = new MyInteger(3);
-        data[1] = new MyInteger(2);
-        data[2] = new MyInteger(1);
+        data[0] = MyInteger.valueOf(3);
+        data[1] = MyInteger.valueOf(2);
+        data[2] = MyInteger.valueOf(1);
         Sort<MyInteger> sorter = new QuickSort<>();
         MyInteger[] output = sorter.sort(data, true);
-        Assert.assertEquals(new MyInteger(1), output[0]);
-        Assert.assertEquals(new MyInteger(2), output[1]);
-        Assert.assertEquals(new MyInteger(3), output[2]);
+        Assert.assertEquals(MyInteger.valueOf(1), output[0]);
+        Assert.assertEquals(MyInteger.valueOf(2), output[1]);
+        Assert.assertEquals(MyInteger.valueOf(3), output[2]);
     }
 
     @Test
     public void test2() {
         MyInteger[] data = new MyInteger[7];
-        data[0] = new MyInteger(-1);
-        data[1] = new MyInteger(3);
-        data[2] = new MyInteger(5);
-        data[3] = new MyInteger(1);
-        data[4] = new MyInteger(0);
-        data[5] = new MyInteger(-10);
-        data[6] = new MyInteger(19);
+        data[0] = MyInteger.valueOf(-1);
+        data[1] = MyInteger.valueOf(3);
+        data[2] = MyInteger.valueOf(5);
+        data[3] = MyInteger.valueOf(1);
+        data[4] = MyInteger.valueOf(0);
+        data[5] = MyInteger.valueOf(-10);
+        data[6] = MyInteger.valueOf(19);
         Sort<MyInteger> sorter = new QuickSort<>();
         MyInteger[] output = sorter.sort(data, true);
-        Assert.assertEquals(new MyInteger(-10), output[0]);
-        Assert.assertEquals(new MyInteger(-1), output[1]);
-        Assert.assertEquals(new MyInteger(0), output[2]);
-        Assert.assertEquals(new MyInteger(1), output[3]);
-        Assert.assertEquals(new MyInteger(3), output[4]);
-        Assert.assertEquals(new MyInteger(5), output[5]);
-        Assert.assertEquals(new MyInteger(19), output[6]);
+        Assert.assertEquals(MyInteger.valueOf(-10), output[0]);
+        Assert.assertEquals(MyInteger.valueOf(-1), output[1]);
+        Assert.assertEquals(MyInteger.valueOf(0), output[2]);
+        Assert.assertEquals(MyInteger.valueOf(1), output[3]);
+        Assert.assertEquals(MyInteger.valueOf(3), output[4]);
+        Assert.assertEquals(MyInteger.valueOf(5), output[5]);
+        Assert.assertEquals(MyInteger.valueOf(19), output[6]);
 
         output = sorter.sort(data, false);
-        Assert.assertEquals(new MyInteger(-10), output[6]);
-        Assert.assertEquals(new MyInteger(-1), output[5]);
-        Assert.assertEquals(new MyInteger(0), output[4]);
-        Assert.assertEquals(new MyInteger(1), output[3]);
-        Assert.assertEquals(new MyInteger(3), output[2]);
-        Assert.assertEquals(new MyInteger(5), output[1]);
-        Assert.assertEquals(new MyInteger(19), output[0]);
+        Assert.assertEquals(MyInteger.valueOf(-10), output[6]);
+        Assert.assertEquals(MyInteger.valueOf(-1), output[5]);
+        Assert.assertEquals(MyInteger.valueOf(0), output[4]);
+        Assert.assertEquals(MyInteger.valueOf(1), output[3]);
+        Assert.assertEquals(MyInteger.valueOf(3), output[2]);
+        Assert.assertEquals(MyInteger.valueOf(5), output[1]);
+        Assert.assertEquals(MyInteger.valueOf(19), output[0]);
     }
 }

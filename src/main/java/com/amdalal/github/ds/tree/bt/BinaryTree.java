@@ -1,9 +1,9 @@
 package com.amdalal.github.ds.tree.bt;
 
 import com.amdalal.github.ds.tree.Tree;
-import com.amdalal.github.ds.tree.TreeEntry;
+import com.amdalal.github.ds.Visitable;
 
-public class BinaryTree<T extends TreeEntry> implements Tree<T> {
+public class BinaryTree<T extends Visitable> implements Tree<T> {
 
     private BinaryTreeNode<T> root;
 

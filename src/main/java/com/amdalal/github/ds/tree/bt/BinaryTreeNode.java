@@ -1,8 +1,8 @@
 package com.amdalal.github.ds.tree.bt;
 
-import com.amdalal.github.ds.tree.TreeEntry;
+import com.amdalal.github.ds.Visitable;
 
-public class BinaryTreeNode<T extends TreeEntry> {
+public class BinaryTreeNode<T extends Visitable> {
 
     private T data;
 

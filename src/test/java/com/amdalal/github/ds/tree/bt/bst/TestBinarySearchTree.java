@@ -1,71 +1,71 @@
 package com.amdalal.github.ds.tree.bt.bst;
 
-import com.amdalal.github.ds.tree.bt.traversal.LevelOrderTraversal;
+import org.junit.Test;
+
+import com.amdalal.github.ResultHolder;
 import com.amdalal.github.ds.tree.MyInteger;
 import com.amdalal.github.ds.tree.TreeHelper;
+import com.amdalal.github.ds.tree.bt.traversal.LevelOrderTraversal;
+
 import junit.framework.Assert;
-import org.junit.Test;
 
 public class TestBinarySearchTree {
 
     @Test
     public void test1() {
         BinarySearchTree<MyInteger> tree = TreeHelper.getBinarySearchTree();
-        Assert.assertTrue(tree.search(new MyInteger(1)));
-        Assert.assertTrue(tree.search(new MyInteger(2)));
-        Assert.assertTrue(tree.search(new MyInteger(3)));
-        Assert.assertTrue(tree.search(new MyInteger(4)));
-        Assert.assertTrue(tree.search(new MyInteger(5)));
-        Assert.assertTrue(tree.search(new MyInteger(6)));
-        Assert.assertTrue(tree.search(new MyInteger(7)));
-        Assert.assertTrue(tree.search(new MyInteger(8)));
-        Assert.assertTrue(tree.search(new MyInteger(9)));
-        Assert.assertTrue(tree.search(new MyInteger(10)));
-        Assert.assertTrue(tree.search(new MyInteger(11)));
-        Assert.assertTrue(tree.search(new MyInteger(12)));
-        Assert.assertFalse(tree.search(new MyInteger(13)));
-        Assert.assertFalse(tree.search(new MyInteger(0)));
-        Assert.assertFalse(tree.search(new MyInteger(-1)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(1)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(2)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(3)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(4)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(5)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(6)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(7)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(8)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(9)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(10)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(11)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(12)));
+        Assert.assertFalse(tree.search(MyInteger.valueOf(13)));
+        Assert.assertFalse(tree.search(MyInteger.valueOf(0)));
+        Assert.assertFalse(tree.search(MyInteger.valueOf(-1)));
     }
 
     @Test
     public void test2() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(30));
-        tree.insert(new MyInteger(10));
-        tree.insert(new MyInteger(20));
-        tree.insert(new MyInteger(40));
-        tree.insert(new MyInteger(35));
-        tree.insert(new MyInteger(50));
-        tree.insert(new MyInteger(15));
-        Assert.assertFalse(tree.search(new MyInteger(0)));
-        Assert.assertTrue(tree.search(new MyInteger(10)));
-        Assert.assertTrue(tree.search(new MyInteger(15)));
-        Assert.assertTrue(tree.search(new MyInteger(20)));
-        Assert.assertTrue(tree.search(new MyInteger(30)));
-        Assert.assertTrue(tree.search(new MyInteger(35)));
-        Assert.assertTrue(tree.search(new MyInteger(40)));
-        Assert.assertTrue(tree.search(new MyInteger(50)));
-        Assert.assertFalse(tree.search(new MyInteger(6)));
+        tree.insert(MyInteger.valueOf(30));
+        tree.insert(MyInteger.valueOf(10));
+        tree.insert(MyInteger.valueOf(20));
+        tree.insert(MyInteger.valueOf(40));
+        tree.insert(MyInteger.valueOf(35));
+        tree.insert(MyInteger.valueOf(50));
+        tree.insert(MyInteger.valueOf(15));
+        Assert.assertFalse(tree.search(MyInteger.valueOf(0)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(10)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(15)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(20)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(30)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(35)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(40)));
+        Assert.assertTrue(tree.search(MyInteger.valueOf(50)));
+        Assert.assertFalse(tree.search(MyInteger.valueOf(6)));
 
-        MyInteger x = new MyInteger(-1);
-        x.clear();
-        LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
-        levelOrderTraversal.traverse();
-        Assert.assertEquals("30-10-40-20-35-50-15", x.getOutput());
+        new LevelOrderTraversal<>(tree).traverse();
+        Assert.assertEquals("30-10-40-20-35-50-15", ResultHolder.getResult());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void test3() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(30));
-        tree.insert(new MyInteger(30));
+        tree.insert(MyInteger.valueOf(30));
+        tree.insert(MyInteger.valueOf(30));
     }
 
     @Test
     public void test4() {
         BinarySearchTree<MyInteger> binarySearchTree = TreeHelper.getBinarySearchTree();
-        Assert.assertEquals(new MyInteger(1), binarySearchTree.findMin());
+        Assert.assertEquals(MyInteger.valueOf(1), binarySearchTree.findMin());
     }
 
     @Test
@@ -77,7 +77,7 @@ public class TestBinarySearchTree {
     @Test
     public void test6() {
         BinarySearchTree<MyInteger> binarySearchTree = TreeHelper.getBinarySearchTree();
-        Assert.assertEquals(new MyInteger(12), binarySearchTree.findMax());
+        Assert.assertEquals(MyInteger.valueOf(12), binarySearchTree.findMax());
     }
 
     @Test
@@ -101,54 +101,51 @@ public class TestBinarySearchTree {
     @Test
     public void test10() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(30));
-        tree.insert(new MyInteger(10));
-        tree.insert(new MyInteger(20));
-        tree.insert(new MyInteger(40));
-        tree.insert(new MyInteger(35));
-        tree.insert(new MyInteger(50));
-        tree.insert(new MyInteger(15));
+        tree.insert(MyInteger.valueOf(30));
+        tree.insert(MyInteger.valueOf(10));
+        tree.insert(MyInteger.valueOf(20));
+        tree.insert(MyInteger.valueOf(40));
+        tree.insert(MyInteger.valueOf(35));
+        tree.insert(MyInteger.valueOf(50));
+        tree.insert(MyInteger.valueOf(15));
 
-        tree.delete(new MyInteger(15));
-        MyInteger x = new MyInteger(-1);
-        x.clear();
+        tree.delete(MyInteger.valueOf(15));
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
-        Assert.assertEquals("30-10-40-20-35-50", x.getOutput());
+        Assert.assertEquals("30-10-40-20-35-50", ResultHolder.getResult());
 
-        tree.delete(new MyInteger(50));
-        x.clear();
+        ResultHolder.clear();
+        tree.delete(MyInteger.valueOf(50));
         levelOrderTraversal.traverse();
-        Assert.assertEquals("30-10-40-20-35", x.getOutput());
+        Assert.assertEquals("30-10-40-20-35", ResultHolder.getResult());
 
-        tree.delete(new MyInteger(10));
-        x.clear();
+        ResultHolder.clear();
+        tree.delete(MyInteger.valueOf(10));
         levelOrderTraversal.traverse();
-        Assert.assertEquals("30-20-40-35", x.getOutput());
+        Assert.assertEquals("30-20-40-35", ResultHolder.getResult());
     }
 
     @Test
     public void test11() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(30));
-        tree.insert(new MyInteger(10));
-        tree.insert(new MyInteger(20));
-        tree.insert(new MyInteger(40));
-        tree.insert(new MyInteger(35));
-        tree.insert(new MyInteger(50));
-        tree.insert(new MyInteger(15));
+        tree.insert(MyInteger.valueOf(30));
+        tree.insert(MyInteger.valueOf(10));
+        tree.insert(MyInteger.valueOf(20));
+        tree.insert(MyInteger.valueOf(40));
+        tree.insert(MyInteger.valueOf(35));
+        tree.insert(MyInteger.valueOf(50));
+        tree.insert(MyInteger.valueOf(15));
 
-        tree.delete(new MyInteger(20));
-        MyInteger x = new MyInteger(-1);
-        x.clear();
+        tree.delete(MyInteger.valueOf(20));
+        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
-        Assert.assertEquals("30-10-40-15-35-50", x.getOutput());
+        Assert.assertEquals("30-10-40-15-35-50", ResultHolder.getResult());
 
-        tree.delete(new MyInteger(40));
-        x.clear();
+        tree.delete(MyInteger.valueOf(40));
+        ResultHolder.clear();
         levelOrderTraversal.traverse();
-        Assert.assertEquals("30-10-50-15-35", x.getOutput());
+        Assert.assertEquals("30-10-50-15-35", ResultHolder.getResult());
     }
 
     @Test(expected = NullPointerException.class)
@@ -160,68 +157,65 @@ public class TestBinarySearchTree {
     @Test(expected = IllegalArgumentException.class)
     public void test13() {
         BinarySearchTree<MyInteger> tree = TreeHelper.getBinarySearchTree();
-        tree.delete(new MyInteger(100));
+        tree.delete(MyInteger.valueOf(100));
     }
 
     @Test
     public void test14() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(30));
-        tree.insert(new MyInteger(10));
-        tree.insert(new MyInteger(20));
-        tree.insert(new MyInteger(40));
-        tree.insert(new MyInteger(35));
-        tree.insert(new MyInteger(50));
-        tree.insert(new MyInteger(15));
+        tree.insert(MyInteger.valueOf(30));
+        tree.insert(MyInteger.valueOf(10));
+        tree.insert(MyInteger.valueOf(20));
+        tree.insert(MyInteger.valueOf(40));
+        tree.insert(MyInteger.valueOf(35));
+        tree.insert(MyInteger.valueOf(50));
+        tree.insert(MyInteger.valueOf(15));
 
-        tree.delete(new MyInteger(30));
-        MyInteger x = new MyInteger(-1);
-        x.clear();
+        tree.delete(MyInteger.valueOf(30));
+        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
-        Assert.assertEquals("35-10-40-20-50-15", x.getOutput());
+        Assert.assertEquals("35-10-40-20-50-15", ResultHolder.getResult());
     }
 
     @Test
     public void test15() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(30));
-        tree.insert(new MyInteger(10));
-        tree.insert(new MyInteger(20));
-        tree.insert(new MyInteger(40));
-        tree.insert(new MyInteger(35));
-        tree.insert(new MyInteger(50));
-        tree.insert(new MyInteger(15));
+        tree.insert(MyInteger.valueOf(30));
+        tree.insert(MyInteger.valueOf(10));
+        tree.insert(MyInteger.valueOf(20));
+        tree.insert(MyInteger.valueOf(40));
+        tree.insert(MyInteger.valueOf(35));
+        tree.insert(MyInteger.valueOf(50));
+        tree.insert(MyInteger.valueOf(15));
 
-        tree.delete(new MyInteger(35));
-        tree.delete(new MyInteger(30));
-        MyInteger x = new MyInteger(-1);
-        x.clear();
+        tree.delete(MyInteger.valueOf(35));
+        tree.delete(MyInteger.valueOf(30));
+        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
-        Assert.assertEquals("40-10-50-20-15", x.getOutput());
+        Assert.assertEquals("40-10-50-20-15", ResultHolder.getResult());
     }
 
     @Test
     public void test16() {
         BinarySearchTree<MyInteger> tree = new BinarySearchTree<>();
-        tree.insert(new MyInteger(8));
-        tree.insert(new MyInteger(7));
-        tree.insert(new MyInteger(10));
-        tree.insert(new MyInteger(9));
-        tree.insert(new MyInteger(11));
-        tree.insert(new MyInteger(2));
-        tree.insert(new MyInteger(1));
-        tree.insert(new MyInteger(5));
-        tree.insert(new MyInteger(3));
-        tree.insert(new MyInteger(6));
-        tree.insert(new MyInteger(4));
+        tree.insert(MyInteger.valueOf(8));
+        tree.insert(MyInteger.valueOf(7));
+        tree.insert(MyInteger.valueOf(10));
+        tree.insert(MyInteger.valueOf(9));
+        tree.insert(MyInteger.valueOf(11));
+        tree.insert(MyInteger.valueOf(2));
+        tree.insert(MyInteger.valueOf(1));
+        tree.insert(MyInteger.valueOf(5));
+        tree.insert(MyInteger.valueOf(3));
+        tree.insert(MyInteger.valueOf(6));
+        tree.insert(MyInteger.valueOf(4));
 
-        tree.delete(new MyInteger(2));
-        MyInteger x = new MyInteger(-1);
-        x.clear();
+        tree.delete(MyInteger.valueOf(2));
+        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
-        Assert.assertEquals("8-7-10-3-9-11-1-5-4-6", x.getOutput());
+        Assert.assertEquals("8-7-10-3-9-11-1-5-4-6", ResultHolder.getResult());
     }
 }

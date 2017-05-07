@@ -1,10 +1,10 @@
 package com.amdalal.github.ds.tree.bt.bst;
 
 import com.amdalal.github.ds.tree.bt.BinaryTree;
-import com.amdalal.github.ds.tree.TreeEntry;
+import com.amdalal.github.ds.Visitable;
 import com.amdalal.github.ds.tree.bt.BinaryTreeNode;
 
-public class BinarySearchTree<T extends TreeEntry & Comparable<? super T>> extends BinaryTree<T> {
+public class BinarySearchTree<T extends Visitable & Comparable<? super T>> extends BinaryTree<T> {
 
     public boolean search(T key) {
         return doSearch(getRoot(), key) != null;

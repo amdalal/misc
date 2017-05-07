@@ -4,10 +4,10 @@ import com.amdalal.github.ds.tree.bt.BinaryTree;
 import com.amdalal.github.ds.list.LinkedList;
 import com.amdalal.github.ds.list.impl.SinglyLinkedList;
 import com.amdalal.github.ds.tree.Traversable;
-import com.amdalal.github.ds.tree.TreeEntry;
+import com.amdalal.github.ds.Visitable;
 import com.amdalal.github.ds.tree.bt.BinaryTreeNode;
 
-public class LevelOrderTraversal<T extends TreeEntry> implements Traversable {
+public class LevelOrderTraversal<T extends Visitable> implements Traversable {
 
     private BinaryTree<T> binaryTree;
 

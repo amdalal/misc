@@ -1,13 +1,13 @@
 package com.amdalal.github.ds.tree;
 
 import java.util.Objects;
-import java.util.StringJoiner;
 
-public class MyInteger implements TreeEntry, Comparable<MyInteger> {
+import com.amdalal.github.ResultHolder;
+import com.amdalal.github.ds.Visitable;
+
+public class MyInteger implements Visitable, Comparable<MyInteger> {
 
     private Integer value;
-
-    private static StringJoiner x = new StringJoiner("-");
 
     public MyInteger(Integer value) {
         this.value = value;
@@ -15,19 +15,11 @@ public class MyInteger implements TreeEntry, Comparable<MyInteger> {
 
     @Override
     public void visit() {
-        x.add(value.toString());
-    }
-
-    public void clear() {
-        x = new StringJoiner("-");
+        ResultHolder.append(value.toString());
     }
 
     public static MyInteger valueOf(int i) {
         return new MyInteger(i);
-    }
-
-    public String getOutput() {
-        return x.toString();
     }
 
     @Override
