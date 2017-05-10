@@ -20,12 +20,3 @@ public class ArrayToBST {
     }
 }
 
-class Node {
-    private int data;
-    Node        left;
-    Node        right;
-
-    Node(int data) {
-        this.data = data;
-    }
-}
