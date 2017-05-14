@@ -5,7 +5,7 @@ package com.amdalal.github.problems.misc;
  */
 public class ArrayToBST {
 
-    private static Node transform(int[] input) {
+    public static Node transform(int[] input) {
         return doTransform(input, 0, input.length - 1);
     }
 
@@ -19,4 +19,3 @@ public class ArrayToBST {
         return node;
     }
 }
-

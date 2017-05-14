@@ -6,6 +6,7 @@ class Node {
     Integer data;
     Node    left;
     Node    right;
+    Node    parent;
 
     Node(Integer data) {
         this.data = data;
