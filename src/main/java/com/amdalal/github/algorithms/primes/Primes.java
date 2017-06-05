@@ -1,4 +1,4 @@
-package com.amdalal.github.problems.primes;
+package com.amdalal.github.algorithms.primes;
 
 public interface Primes {
 

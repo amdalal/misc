@@ -1,6 +1,6 @@
-package com.amdalal.github.problems.primes.impl;
+package com.amdalal.github.algorithms.primes.impl;
 
-import com.amdalal.github.problems.primes.Primes;
+import com.amdalal.github.algorithms.primes.Primes;
 
 /**
  * All numbers are prime unless proven otherwise.

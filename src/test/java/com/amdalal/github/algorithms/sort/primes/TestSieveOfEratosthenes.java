@@ -1,8 +1,9 @@
-package com.amdalal.github.problems.primes;
+package com.amdalal.github.algorithms.sort.primes;
 
-import com.amdalal.github.problems.primes.impl.SieveOfEratosthenes;
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.amdalal.github.algorithms.primes.impl.SieveOfEratosthenes;
 
 public class TestSieveOfEratosthenes {
 
