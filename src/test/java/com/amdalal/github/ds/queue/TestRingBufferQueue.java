@@ -1,9 +1,10 @@
 package com.amdalal.github.ds.queue;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.ds.queue.impl.RingBufferQueue;
 import org.junit.Test;
 
-public class TestRingBufferQueue {
+public class TestRingBufferQueue extends BaseTest {
 
     @Test
     public void test1() {

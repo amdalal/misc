@@ -1,10 +1,12 @@
 package com.amdalal.github.ds.hashtable;
 
-import com.amdalal.github.ds.hashtable.impl.ChainingHashTable;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestChainingHashTable {
+import com.amdalal.github.BaseTest;
+import com.amdalal.github.ds.hashtable.impl.ChainingHashTable;
+
+public class TestChainingHashTable extends BaseTest {
 
     @Test
     public void test1() {

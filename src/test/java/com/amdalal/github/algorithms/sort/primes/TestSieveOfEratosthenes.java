@@ -1,11 +1,12 @@
 package com.amdalal.github.algorithms.sort.primes;
 
+import com.amdalal.github.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.amdalal.github.algorithms.primes.impl.SieveOfEratosthenes;
 
-public class TestSieveOfEratosthenes {
+public class TestSieveOfEratosthenes extends BaseTest {
 
     @Test
     public void testSieveOfEratosthenes() {

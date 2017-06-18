@@ -1,9 +1,10 @@
 package com.amdalal.github.ds.queue;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.ds.queue.impl.TwoStackQueue;
 import org.junit.Test;
 
-public class TestTwoStackQueue {
+public class TestTwoStackQueue extends BaseTest {
 
     @Test
     public void test1() {

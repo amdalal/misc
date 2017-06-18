@@ -1,12 +1,14 @@
 package com.amdalal.github.ds.list;
 
-import com.amdalal.github.ds.list.impl.SinglyLinkedList;
+import java.util.NoSuchElementException;
+
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.NoSuchElementException;
+import com.amdalal.github.BaseTest;
+import com.amdalal.github.ds.list.impl.SinglyLinkedList;
 
-public class TestSinglyLinkedList {
+public class TestSinglyLinkedList extends BaseTest {
 
     @Test
     public void test1() {

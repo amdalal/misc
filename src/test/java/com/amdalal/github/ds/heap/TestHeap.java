@@ -1,11 +1,12 @@
 package com.amdalal.github.ds.heap;
 
+import com.amdalal.github.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.amdalal.github.ds.tree.MyInteger;
 
-public class TestHeap {
+public class TestHeap extends BaseTest {
 
     @Test
     public void test1() {

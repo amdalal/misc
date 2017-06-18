@@ -1,5 +1,6 @@
 package com.amdalal.github.ds.tree.bt.traversal;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.ResultHolder;
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +8,7 @@ import org.junit.Test;
 import com.amdalal.github.ds.tree.MyInteger;
 import com.amdalal.github.ds.tree.TreeHelper;
 
-public class TestPostOrderTraversal {
+public class TestPostOrderTraversal extends BaseTest {
 
     @Test
     public void test1() {

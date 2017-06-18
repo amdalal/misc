@@ -1,11 +1,12 @@
 package com.amdalal.github.algorithms.sort;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.algorithms.sort.impl.MergeSort;
 import com.amdalal.github.ds.tree.MyInteger;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestMergeSort {
+public class TestMergeSort extends BaseTest {
 
     @Test
     public void test1() {

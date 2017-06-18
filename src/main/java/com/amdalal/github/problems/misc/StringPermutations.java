@@ -7,7 +7,7 @@ public class StringPermutations {
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        for (String s : printSubStrings("abc")) {
+        for (String s : printPermutations("abcdefg")) {
             System.out.println(s);
         }
         System.out.println("time: " + (System.currentTimeMillis() - start) + " ms");

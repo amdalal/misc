@@ -1,5 +1,6 @@
 package com.amdalal.github.ds.tree.bt.traversal;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.ds.tree.MyInteger;
 import com.amdalal.github.ds.tree.bt.BinaryTree;
 import com.amdalal.github.ds.tree.TreeHelper;
@@ -7,7 +8,7 @@ import com.amdalal.github.ds.tree.bt.BinaryTreeNode;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestPreOrderTraversal {
+public class TestPreOrderTraversal extends BaseTest {
 
     @Test
     public void test1() {

@@ -3,7 +3,9 @@ package com.amdalal.github.problems.dp;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestStairs {
+import com.amdalal.github.BaseTest;
+
+public class TestStairs extends BaseTest {
 
     @Test
     public void test1() {

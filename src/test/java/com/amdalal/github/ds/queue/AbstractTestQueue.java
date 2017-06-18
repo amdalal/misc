@@ -1,9 +1,10 @@
 package com.amdalal.github.ds.queue;
 
+import com.amdalal.github.BaseTest;
 import junit.framework.Assert;
 import org.junit.Test;
 
-public abstract class AbstractTestQueue {
+public abstract class AbstractTestQueue extends BaseTest {
 
     @Test
     public static void test1(Queue<Integer> queue) {

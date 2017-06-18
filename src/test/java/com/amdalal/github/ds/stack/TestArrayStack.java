@@ -1,10 +1,11 @@
 package com.amdalal.github.ds.stack;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.ds.stack.impl.ArrayStack;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestArrayStack {
+public class TestArrayStack extends BaseTest {
 
     @Test
     public void test1() {

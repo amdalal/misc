@@ -1,11 +1,12 @@
 package com.amdalal.github.algorithms.sort;
 
+import com.amdalal.github.BaseTest;
 import com.amdalal.github.algorithms.sort.impl.QuickSort;
 import com.amdalal.github.ds.tree.MyInteger;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestQuickSort {
+public class TestQuickSort extends BaseTest {
 
     @Test
     public void test1() {

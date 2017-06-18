@@ -1,10 +1,11 @@
 package com.amdalal.github.ds.tree.bt;
 
+import com.amdalal.github.BaseTest;
 import org.junit.Test;
 
 import com.amdalal.github.ds.tree.MyInteger;
 
-public class TestBinaryTreeNode {
+public class TestBinaryTreeNode extends BaseTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void test2() {

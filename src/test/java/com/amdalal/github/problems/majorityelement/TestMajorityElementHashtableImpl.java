@@ -1,10 +1,13 @@
 package com.amdalal.github.problems.majorityelement;
 
-import com.amdalal.github.problems.majorityelement.impl.MajorityElementHashtableImpl;
-import junit.framework.Assert;
 import org.junit.Test;
 
-public class TestMajorityElementHashtableImpl {
+import com.amdalal.github.BaseTest;
+import com.amdalal.github.problems.majorityelement.impl.MajorityElementHashtableImpl;
+
+import junit.framework.Assert;
+
+public class TestMajorityElementHashtableImpl extends BaseTest {
 
     @Test
     public void test1() {

@@ -1,10 +1,12 @@
 package com.amdalal.github.problems.binarysearch;
 
-import com.amdalal.github.problems.binaryserch.BinarySearch;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestBinarySearch {
+import com.amdalal.github.BaseTest;
+import com.amdalal.github.problems.binaryserch.BinarySearch;
+
+public class TestBinarySearch extends BaseTest {
 
     @Test
     public void test1() {

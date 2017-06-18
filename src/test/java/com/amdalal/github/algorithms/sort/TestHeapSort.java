@@ -1,12 +1,13 @@
 package com.amdalal.github.algorithms.sort;
 
+import com.amdalal.github.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.amdalal.github.algorithms.sort.impl.HeapSort;
 import com.amdalal.github.ds.tree.MyInteger;
 
-public class TestHeapSort {
+public class TestHeapSort extends BaseTest {
     @Test
     public void test1() {
         MyInteger[] data = new MyInteger[3];

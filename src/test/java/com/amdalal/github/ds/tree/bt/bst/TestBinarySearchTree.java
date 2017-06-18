@@ -1,5 +1,6 @@
 package com.amdalal.github.ds.tree.bt.bst;
 
+import com.amdalal.github.BaseTest;
 import org.junit.Test;
 
 import com.amdalal.github.ResultHolder;
@@ -9,7 +10,7 @@ import com.amdalal.github.ds.tree.bt.traversal.LevelOrderTraversal;
 
 import junit.framework.Assert;
 
-public class TestBinarySearchTree {
+public class TestBinarySearchTree extends BaseTest {
 
     @Test
     public void test1() {
@@ -137,7 +138,6 @@ public class TestBinarySearchTree {
         tree.insert(MyInteger.valueOf(15));
 
         tree.delete(MyInteger.valueOf(20));
-        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
         Assert.assertEquals("30-10-40-15-35-50", ResultHolder.getResult());
@@ -172,7 +172,6 @@ public class TestBinarySearchTree {
         tree.insert(MyInteger.valueOf(15));
 
         tree.delete(MyInteger.valueOf(30));
-        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
         Assert.assertEquals("35-10-40-20-50-15", ResultHolder.getResult());
@@ -191,7 +190,6 @@ public class TestBinarySearchTree {
 
         tree.delete(MyInteger.valueOf(35));
         tree.delete(MyInteger.valueOf(30));
-        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
         Assert.assertEquals("40-10-50-20-15", ResultHolder.getResult());
@@ -213,7 +211,6 @@ public class TestBinarySearchTree {
         tree.insert(MyInteger.valueOf(4));
 
         tree.delete(MyInteger.valueOf(2));
-        ResultHolder.clear();
         LevelOrderTraversal<MyInteger> levelOrderTraversal = new LevelOrderTraversal<>(tree);
         levelOrderTraversal.traverse();
         Assert.assertEquals("8-7-10-3-9-11-1-5-4-6", ResultHolder.getResult());
