@@ -1,4 +1,4 @@
-package com.amdalal.github.problems.misc;
+package com.amdalal.github.problems.tree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,10 @@ import java.util.List;
 import com.amdalal.github.ds.list.LinkedList;
 import com.amdalal.github.ds.list.impl.SinglyLinkedList;
 
-public class LinkedListForEachLevelOfBT {
+/**
+ * Linked list for each level of BT.
+ */
+public class LinkedListForEachLevel {
 
     public static List<LinkedList<Node>> getListOfLists(Node root) {
         List<LinkedList<Node>> output = new ArrayList<>();

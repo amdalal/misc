@@ -1,6 +1,7 @@
-package com.amdalal.github.problems.misc;
+package com.amdalal.github.problems.tree;
 
 import com.amdalal.github.BaseTest;
+import com.amdalal.github.problems.tree.Invert;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ import com.amdalal.github.ds.tree.bt.BinaryTree;
 import com.amdalal.github.ds.tree.bt.BinaryTreeNode;
 import com.amdalal.github.ds.tree.bt.traversal.InOrderTraversal;
 
-public class TestInvertBinaryTree extends BaseTest {
+public class TestInvert extends BaseTest {
 
     @Test
     public void test1() {
@@ -49,7 +50,7 @@ public class TestInvertBinaryTree extends BaseTest {
         BinaryTree<MyInteger> tree = new BinaryTree<>();
         tree.setRoot(n4);
 
-        BinaryTree<MyInteger> invertedTree = new InvertBinaryTree<MyInteger>().invert(tree);
+        BinaryTree<MyInteger> invertedTree = new Invert<MyInteger>().invert(tree);
         Traversal<MyInteger> traversal = new InOrderTraversal<>(invertedTree);
         traversal.traverse();
         Assert.assertEquals("12-7-13-2-6-4-11-5-10-3-9-1-8", ResultHolder.getResult());

@@ -1,10 +1,10 @@
-package com.amdalal.github.problems.misc;
+package com.amdalal.github.problems.tree;
 
 import com.amdalal.github.ds.Visitable;
 import com.amdalal.github.ds.tree.bt.BinaryTree;
 import com.amdalal.github.ds.tree.bt.BinaryTreeNode;
 
-public class InvertBinaryTree<T extends Visitable> {
+public class Invert<T extends Visitable> {
 
     public BinaryTree<T> invert(BinaryTree<T> tree) {
         BinaryTree<T> returnTree = new BinaryTree<>();
@@ -20,7 +20,7 @@ public class InvertBinaryTree<T extends Visitable> {
             invert(n.getRightChild());
         }
         if (n.getLeftChild() != null || n.getRightChild() != null) {
-            BinaryTreeNode temp = n.getLeftChild();
+            BinaryTreeNode<T> temp = n.getLeftChild();
             n.setLeftChild(n.getRightChild());
             n.setRightChild(temp);
         }

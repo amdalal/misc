@@ -1,6 +1,9 @@
-package com.amdalal.github.problems.misc;
+package com.amdalal.github.problems.tree;
 
-public class IsBinaryTreeBalanced {
+/**
+ * Is binary tree balanced?
+ */
+public class IsBalanced {
 
     public static int test(Node root) {
         if (root == null) {

@@ -1,4 +1,6 @@
-package com.amdalal.github.problems.misc;
+package com.amdalal.github.problems.tree;
+
+import com.amdalal.github.problems.tree.Node;
 
 public class CommonAncestor {
 

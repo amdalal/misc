@@ -1,4 +1,4 @@
-package com.amdalal.github.problems.misc;
+package com.amdalal.github.problems.tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
